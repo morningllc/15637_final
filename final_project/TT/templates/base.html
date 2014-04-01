@@ -53,6 +53,7 @@
 			<!-- Main -->
 			<div id="main">
 				<!-- Slider -->
+				{% block slider_content %}
 				<div id="slider-frame">					
 					<div id="slider">
 						<ul>
@@ -101,7 +102,9 @@
    						</div>   						
 					</div>
 				</div>
+				{% endblock %}
 				<!-- END Slider -->
+
 				<!-- Sidebar -->
 				<div id="sidebar">
 					<div class="box">
@@ -145,7 +148,9 @@
 					</div>
 				</div>
 				<!-- END Sidebar -->
+
 				<!-- Content -->
+				{% block content_content %}
 				<div id="content">
 					<!-- Products -->
 					<div class="products">
@@ -287,6 +292,7 @@
 					</div>		
 					<!-- END Products -->
 				</div>
+				{% endblock %}
 				<!-- END Content -->
 				<div class="cl"></div>
 			</div>

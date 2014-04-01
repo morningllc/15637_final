@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block slider_content %}
+<div id="ad-slider-frame">					
+	<div id="ad-slider">
+		<ul>
+			<li>
+				<img src="{% static "img/ad-chair.png" %}" alt="Orage rotating chair" />
+				<div class="ad-caption">
+					<img src="{% static "img/ad-mega-sale.png" %}" alt="Mega Sale Sign" />
+					<p>Lorem ipsum dolor sit amet</p>
+					<a title="Order Now!" class="ad-order-button" href="#">order now</a>
+				</div>	
+			</li>
+			<li>
+				<img src="{% static "img/ad-chair.png" %}" alt="Orage rotating chair" />
+				<div class="ad-caption">
+					<img src="{% static "img/ad-mega-sale.png" %}" alt="Mega Sale Sign" />
+					<p>Lorem ipsum dolor sit amet</p>
+					<a title="Order Now!" class="ad-order-button" href="#">order now</a>
+				</div>
+			</li>
+			<li>
+				<img src="{% static "img/ad-chair.png" %}" alt="Orage rotating chair" />
+				<div class="ad-caption">
+					<img src="{% static "img/ad-mega-sale.png" %}" alt="Mega Sale Sign" />
+					<p>Lorem ipsum dolor sit amet</p>
+					<a title="Order Now!" class="ad-order-button" href="#">order now</a>
+				</div>
+			</li>
+			<li>
+				<img src="{% static "img/ad-chair.png" %}" alt="Orage rotating chair" />
+				<div class="ad-caption">
+					<img src="{% static "img/ad-mega-sale.png" %}" alt="Mega Sale Sign" />
+					<p>Lorem ipsum dolor sit amet</p>
+					<a title="Order Now!" class="ad-order-button" href="#">order now</a>
+				</div>
+			</li>
+		</ul>
+		<div class="ad-jcarousel-control">
+    		<a title="slide 1" href="#">1</a>
+     		<a title="slide 2" href="#">2</a>
+      		<a title="slide 3" href="#">3</a>
+     		<a title="slide 4" href="#">4</a>			     		 
+		</div>
+		<div class="ad-slider-arrows">
+			<a title="Next Slide" id="ad-next" href="#">next</a>
+			<a title="Previous Slide" id="ad-prev" href="#">prev</a>
+		</div>   						
+	</div>
+</div>
+{% endblock %}
+
+{% block content_content %}
+	{% if errors %}
+		{% for error in errors%}
+		<p style="color:red">
+			{{error}}
+		</p>
+		{%endfor%}
+	{% endif %}
+
+	<form action="{% url 'login' %}" method="post">
+
+		<table>
+			<tr>
+			    <td>{{ form.username.label_tag }}</td>
+			    <td>{{ form.username }}</td>
+			</tr>
+			<tr>
+			    <td>{{ form.password.label_tag }}</td>
+			    <td>{{ form.password }}</td>
+			</tr>
+		</table>
+
+		<input type="submit" value="Login" />
+		<a href="/blog/registration">Register</a>
+		<input type="hidden" name="next" value="{{ next }}" />
+
+	    {% csrf_token %}
+    </form>
+{% endblock %}
