@@ -67,3 +67,9 @@ class RegistrationForm(forms.Form):
 	        raise forms.ValidationError("Username is already taken.")
 
 	    return username
+
+
+class ItemForm(forms.ModelForm):
+	class Meta:
+		model = ItemForm
+		exclude = ()
