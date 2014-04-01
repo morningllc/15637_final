@@ -69,7 +69,3 @@ class RegistrationForm(forms.Form):
 	    return username
 
 
-class ItemForm(forms.ModelForm):
-	class Meta:
-		model = ItemForm
-		exclude = ()
