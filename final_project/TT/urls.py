@@ -1,5 +1,6 @@
 from django.conf.urls import patterns, include, url
 
+<<<<<<< HEAD
 from django.contrib import admin
 
 admin.autodiscover()
@@ -27,3 +28,10 @@ urlpatterns = patterns('',
     # url(r'^get-list$', 'blog.views.get_list'),
     # url(r'^get-list-loggedin$', 'blog.views.get_list_loggedin'),
 )
+=======
+
+urlpatterns = patterns('',
+
+
+)
+>>>>>>> 38c3c09f2f0b89a0e4c0b5aac5a7a55adbffb032
