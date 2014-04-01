@@ -67,3 +67,5 @@ class RegistrationForm(forms.Form):
 	        raise forms.ValidationError("Username is already taken.")
 
 	    return username
+
+

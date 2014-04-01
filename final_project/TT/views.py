@@ -58,7 +58,7 @@ def register(request):
                 http://%s/TT/confirm?t=%s&u=%s
                 """ % (request.get_host(),token,new_user.username)
 
-    send_mail(subject="Verify your email address from TinyBlog",
+    send_mail(subject="Verify your email address from TT",
               message=mailbody,
               from_email="lli@andrew.cmu.edu",
               recipient_list=[new_user.email])
